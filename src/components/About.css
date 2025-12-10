@@ -1,0 +1,53 @@
+.about-section {
+  padding: 54px 0;
+  text-align: center;
+  background-color: #282c34; /* Lighter background for the About section */
+}
+
+.profile-picture {
+  margin-bottom: 27px;
+}
+
+.profile-picture img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.about-text {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+  color: #f0f0f0; /* Light text for dark mode */
+}
+
+.resume-download-btn {
+  display: inline-block;
+  margin-top: 27px;
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 29px;
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  box-shadow: 0 3.6px 7.2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.resume-download-btn:hover {
+  background-color: #5b21b6;
+  transform: translateY(-2.7px); /* ( -3px * 0.9) */
+  box-shadow: 0 7.2px 14.4px rgba(0, 0, 0, 0.3); /* (0 8px 16px * 0.9) */
+}

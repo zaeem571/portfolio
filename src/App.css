@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background-color: #121212;  /* Even darker background for the body */
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-weight: 400;
+  color: #f0f0f0; /* Light text color */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #191919;  /* Even darker app container background */
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #282c34;  /* Lighter background for sections/cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjusted shadow for darker background */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Lighter headings */
+  font-weight: 600;
+}
+
+.App img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 90%; /* Reduce base font size for overall scaling */
+}
