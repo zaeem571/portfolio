@@ -26,15 +26,15 @@ const About = forwardRef((props, ref) => {
       <h2>
         <TypeAnimation
           sequence={[
-            "My name is Zaeem Mahmood and I'm a CS Student",
+            "My name is Zaeem Mahmood and I'm a Computer Science Student",
             1000,
-            "My name is Zaeem Mahmood and I'm a problem solver",
+            "My name is Zaeem Mahmood and I'll be a future Android Developer",
             2000,
-            "My name is Zaeem Mahmood and I'm an android developer",
+            "My name is Zaeem Mahmood and I'm a Problem Solver",
             2000,
-            "My name is Zaeem Mahmood and I'm an AI enthusiast",
+            "My name is Zaeem Mahmood and I'm an AI Enthusiast",
             2000,
-            "My name is Zaeem Mahmood and I'm a lifelong learner",
+            "My name is Zaeem Mahmood and I'm a Lifelong Learner",
             2000,
           ]}
           wrapper="span"
@@ -48,8 +48,8 @@ const About = forwardRef((props, ref) => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            Hi! My name is Leona and I'm a junior at Penn State majoring in
-            Computer Science and minoring in Math! I'm looking to specialize in
+            Hi! My name is Zaeem and I'm a Computer Science student at
+            Government College University, Lahore! I'm looking to specialize in
             AI and machine learning engineering.
           </p>
         </div>

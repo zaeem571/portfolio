@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import './Navbar.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import "./Navbar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +21,10 @@ function Navbar() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
 
@@ -37,21 +37,41 @@ function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${isThin ? 'navbar-thin' : ''}`}>
+    <nav className={`navbar ${isThin ? "navbar-thin" : ""}`}>
       <div className="navbar-container">
         <a href="/portfolio/" className="navbar-logo" onClick={closeMenu}>
-          Leona Chen
+          Zaeem Mahmood
         </a>
         <div className="menu-icon" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
-        <div className={`nav-menu ${isOpen ? 'active' : ''} ${isThin ? 'navbar-menu-thin' : ''}`}>
-          <a href="#about" className="nav-item" onClick={closeMenu}>About</a>
-          <a href="#skills" className="nav-item" onClick={closeMenu}>Skills</a>
-          <a href="#work-experience" className="nav-item" onClick={closeMenu}>Work Experience</a>
-          <a href="#projects" className="nav-item" onClick={closeMenu}>Projects</a>
-          <a href="#leadership-involvement" className="nav-item" onClick={closeMenu}>Leadership & Involvement</a>
-          <a href="#contact" className="nav-item" onClick={closeMenu}>Contact</a>
+        <div
+          className={`nav-menu ${isOpen ? "active" : ""} ${
+            isThin ? "navbar-menu-thin" : ""
+          }`}
+        >
+          <a href="#about" className="nav-item" onClick={closeMenu}>
+            About
+          </a>
+          <a href="#skills" className="nav-item" onClick={closeMenu}>
+            Skills
+          </a>
+          <a href="#work-experience" className="nav-item" onClick={closeMenu}>
+            Work Experience
+          </a>
+          <a href="#projects" className="nav-item" onClick={closeMenu}>
+            Projects
+          </a>
+          <a
+            href="#leadership-involvement"
+            className="nav-item"
+            onClick={closeMenu}
+          >
+            Leadership & Involvement
+          </a>
+          <a href="#contact" className="nav-item" onClick={closeMenu}>
+            Contact
+          </a>
         </div>
       </div>
     </nav>
