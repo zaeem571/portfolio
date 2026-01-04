@@ -2,6 +2,7 @@ import React from "react";
 import "./Projects.css";
 import "./animations.css";
 import { useIntersectionObserver } from "./useIntersectionObserver";
+import Card from "./Card";
 
 function Projects() {
   const [ref, isVisible] = useIntersectionObserver();
@@ -34,28 +35,14 @@ function Projects() {
       <h2>Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <div className="technologies">
-              {project.technologies.map((tech, i) => (
-                <span key={i} className="tech-tag">
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            {project.link && (
-              <a
-                href={project.link}
-                className="project-link highlight-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-              </a>
-            )}
-          </div>
+          <Card
+            key={index}
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            link={project.link}
+            linkText="View Project"
+          />
         ))}
       </div>
     </section>

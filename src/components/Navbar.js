@@ -64,7 +64,7 @@ function Navbar() {
             className="nav-item"
             onClick={closeMenu}
           >
-            Certificate & Involvement
+            Certificates & Involvement
           </a>
           <a href="#contact" className="nav-item" onClick={closeMenu}>
             Contact

@@ -50,8 +50,38 @@ html {
 
 :root {
   --card-background: #3a3f4a;
-  --card-background-hover: #444a56;
   --section-background: #282c34;
-  --tech-tag-background: #282c34;
-  --tech-tag-hover: #1c1e21;
+  --text-color: #f0f0f0;
+  --heading-color: #e0e0e0;
+  --spacing-sm: 9px;
+  --spacing-md: 18px;
+  --spacing-lg: 27px;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* Common section container styles */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 810px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  max-width: 1080px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.section-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }

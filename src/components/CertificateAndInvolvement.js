@@ -2,6 +2,7 @@ import React from "react";
 import "./CertificateAndInvolvement.css";
 import "./animations.css";
 import { useIntersectionObserver } from "./useIntersectionObserver";
+import Card from "./Card";
 
 function CertificateAndInvolvement() {
   const [ref, isVisible] = useIntersectionObserver();
@@ -65,18 +66,13 @@ function CertificateAndInvolvement() {
       <h2>Certificates & Involvement</h2>
       <div className="certificate-container">
         {involvements.map((inv, index) => (
-          <div key={index} className="certificate-card">
-            <h3>
-              {inv.title} @ {inv.company}
-            </h3>
-            <p className="involvement-years">{inv.years}</p>
-            <p className="involvement-location">{inv.location}</p>
-            <ul className="involvement-description">
-              {inv.description.map((desc, i) => (
-                <li key={i}>{desc}</li>
-              ))}
-            </ul>
-          </div>
+          <Card
+            key={index}
+            title={`${inv.title} @ ${inv.company}`}
+            years={inv.years}
+            location={inv.location}
+            description={inv.description}
+          />
         ))}
       </div>
     </section>
