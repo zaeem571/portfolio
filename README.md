@@ -1,4 +1,4 @@
-# 🌐 Personal Website – Leona Chen
+# 🌐 Personal Website
 
 This is the source code for my personal website, built using **React.js**. It's designed to showcase my projects, resume, and background as a student and a developer.
 
