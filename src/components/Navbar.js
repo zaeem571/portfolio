@@ -53,9 +53,6 @@ function Navbar() {
           <a href="#about" className="nav-item" onClick={closeMenu}>
             About
           </a>
-          <a href="#skills" className="nav-item" onClick={closeMenu}>
-            Skills
-          </a>
           <a href="#work-experience" className="nav-item" onClick={closeMenu}>
             Work Experience
           </a>
@@ -63,11 +60,11 @@ function Navbar() {
             Projects
           </a>
           <a
-            href="#leadership-involvement"
+            href="#certificate-involvement"
             className="nav-item"
             onClick={closeMenu}
           >
-            Leadership & Involvement
+            Certificate & Involvement
           </a>
           <a href="#contact" className="nav-item" onClick={closeMenu}>
             Contact

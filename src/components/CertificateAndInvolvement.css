@@ -1,10 +1,10 @@
-.leadership-involvement-section {
+.certificate-involvement-section {
   padding: 54px 0;
   text-align: center;
   background-color: #282c34; /* Matches other sections */
 }
 
-.involvements-container {
+.certificate-container {
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -13,8 +13,8 @@
   padding: 0 18px;
 }
 
-.involvement-card {
-  background-color: #3a3f4a; /* Lighter background for cards */
+.certificate-card {
+  background-color: var(--card-background);
   border-radius: 8px;
   box-shadow: 0 3.6px 7.2px rgba(0, 0, 0, 0.2);
   padding: 27px;
@@ -22,31 +22,31 @@
   transition: all 0.3s ease;
 }
 
-.involvement-card h3 {
+.certificate-card h3 {
   font-size: 1.8rem;
   color: #e0e0e0; /* Lighter headings */
   margin-bottom: 9px;
 }
 
-.involvement-card:hover {
+.certificate-card:hover {
   transform: translateY(-4.5px);
   box-shadow: 0 7.2px 14.4px rgba(0, 0, 0, 0.3);
 }
 
-.involvement-years,
-.involvement-location {
+.certificate-years,
+.certificate-location {
   font-size: 1rem;
   color: #c8c7c7; /* Lighter grey for years/location */
   margin-bottom: 13.5px;
 }
 
-.involvement-description {
+.certificate-description {
   list-style-type: disc;
   margin-left: 18px;
   font-size: 1.1rem;
   color: #f0f0f0; /* Light text */
 }
 
-.involvement-description li {
+.certificate-description li {
   margin-bottom: 7.2px;
-} 
+}

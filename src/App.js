@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import WorkExperience from './components/WorkExperience';
-import Skills from './components/Skills';
-import LeadershipAndInvolvement from './components/LeadershipAndInvolvement';
+import React, { useRef } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import WorkExperience from "./components/WorkExperience";
+import Skills from "./components/Skills";
+import CertificateAndInvolvement from "./components/CertificateAndInvolvement";
 
 function App() {
   const aboutSectionRef = useRef(null);
@@ -19,7 +19,7 @@ function App() {
         <Skills />
         <WorkExperience />
         <Projects />
-        <LeadershipAndInvolvement />
+        <CertificateAndInvolvement />
         <Contact />
       </main>
     </div>

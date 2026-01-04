@@ -18,10 +18,10 @@
 }
 
 .project-card {
-  background: #3a3f4a;
+  background: var(--card-background);
   border-radius: 8px;
   padding: 18px;
-  box-shadow: 0 3.6px 7.2px rgba(0,0,0,0.2);
+  box-shadow: 0 3.6px 7.2px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -119,4 +119,3 @@
     margin-top: 12px;
   }
 }
-

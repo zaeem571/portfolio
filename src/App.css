@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background-color: #121212;  /* Even darker background for the body */
-  font-family: 'Quicksand', Arial, sans-serif;
+  background-color: #121212; /* Even darker background for the body */
+  font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
   color: #f0f0f0; /* Light text color */
 }
@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #191919;  /* Even darker app container background */
+  background-color: #191919; /* Even darker app container background */
 }
 
 main {
@@ -25,7 +25,7 @@ main {
 section {
   margin: 40px 0;
   padding: 20px;
-  background-color: #282c34;  /* Lighter background for sections/cards */
+  background-color: #282c34; /* Lighter background for sections/cards */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjusted shadow for darker background */
 }
@@ -46,4 +46,12 @@ h2 {
 html {
   scroll-behavior: smooth;
   font-size: 90%; /* Reduce base font size for overall scaling */
+}
+
+:root {
+  --card-background: #3a3f4a;
+  --card-background-hover: #444a56;
+  --section-background: #282c34;
+  --tech-tag-background: #282c34;
+  --tech-tag-hover: #1c1e21;
 }

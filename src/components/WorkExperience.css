@@ -36,7 +36,7 @@
 }
 
 .experience-card {
-  background-color: #3a3f4a;
+  background-color: var(--card-background);
   border-radius: 8px;
   box-shadow: 0 3.6px 7.2px rgba(0, 0, 0, 0.2);
   padding: 27px;
@@ -76,4 +76,4 @@
 
 .experience-description li {
   margin-bottom: 7.2px;
-} 
+}
