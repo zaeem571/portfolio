@@ -2,28 +2,42 @@
   padding: 54px 0;
   text-align: center;
   background-color: #282c34; /* Lighter background for the About section */
+  position: relative;
 }
 
-.profile-picture {
-  margin-bottom: 27px;
-}
-
-.profile-picture img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
+.about-section h2 {
+  margin-bottom: 40px;
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 18px;
+  display: flex;
+  align-items: flex-end;
+  gap: 60px;
+  position: relative;
+}
+
+.profile-picture {
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-left: 0;
+  margin-bottom: -20px;
+}
+
+.profile-picture img {
+  width: 400px;
+  height: 500px;
+  border-radius: 0;
+  object-fit: cover;
+  display: block;
 }
 
 .about-text {
   text-align: left;
   line-height: 1.6;
+  flex: 1;
 }
 
 .about-text p {
@@ -32,22 +46,63 @@
   color: #f0f0f0; /* Light text for dark mode */
 }
 
-.resume-download-btn {
-  display: inline-block;
-  margin-top: 27px;
-  color: #fff;
-  text-decoration: none;
-  padding: 11px 29px;
+.skills-inline {
+  margin-top: 30px;
+}
+
+.skills-inline h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f0f0f0;
+  text-align: left;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
   background-color: #7c3aed;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  box-shadow: 0 3.6px 7.2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
-.resume-download-btn:hover {
+.skill-item:hover {
   background-color: #5b21b6;
-  transform: translateY(-2.7px); /* ( -3px * 0.9) */
-  box-shadow: 0 7.2px 14.4px rgba(0, 0, 0, 0.3); /* (0 8px 16px * 0.9) */
+  transform: translateY(-2px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .skills-inline h3 {
+    text-align: center;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  .profile-picture img {
+    width: 250px;
+    height: 300px;
+  }
 }

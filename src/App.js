@@ -5,7 +5,6 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import WorkExperience from "./components/WorkExperience";
-import Skills from "./components/Skills";
 import CertificateAndInvolvement from "./components/CertificateAndInvolvement";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <Navbar aboutSectionRef={aboutSectionRef} />
       <main>
         <About ref={aboutSectionRef} />
-        <Skills />
         <WorkExperience />
         <Projects />
         <CertificateAndInvolvement />

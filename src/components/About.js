@@ -17,6 +17,17 @@ const About = forwardRef((props, ref) => {
     }
   };
 
+  const skills = [
+    "Python",
+    "SQL",
+    "Kotlin",
+    "HTML/CSS",
+    "Next.js",
+    "Git",
+    "GitHub",
+    "Figma",
+  ];
+
   return (
     <section
       id="about"
@@ -42,16 +53,27 @@ const About = forwardRef((props, ref) => {
           repeat={Infinity}
         />
       </h2>
-      <div className="profile-picture">
-        <img src="/portfolio/profilepic.png" alt="Leona Chen" />
-      </div>
       <div className="about-content">
+        <div className="profile-picture">
+          <img src="/portfolio/profilepic.png" alt="Zaeem Mahmood" />
+        </div>
         <div className="about-text">
           <p>
             Hi! My name is Zaeem and I'm a Computer Science student at
             Government College University, Lahore! I'm looking to specialize in
             AI and machine learning engineering.
           </p>
+
+          <div className="skills-inline">
+            <h3>Skills</h3>
+            <ul className="skills-list">
+              {skills.map((skill, index) => (
+                <li key={index} className="skill-item">
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
