@@ -1,6 +1,5 @@
 import React from "react";
 import "./WorkExperience.css";
-import "./animations.css";
 import { useIntersectionObserver } from "./useIntersectionObserver";
 import Card from "./Card";
 
@@ -8,38 +7,6 @@ function WorkExperience() {
   const [ref, isVisible] = useIntersectionObserver();
 
   const experiences = [
-    {
-      title: "Technology Intern",
-      company: "Penn State Department of Mathematics",
-      location: "Remote",
-      years: "May 2025 - Present",
-      description: [
-        "Enhanced Matrices, Multivariable Calculus, and Ordinary and Partial Differential Equations online Pressbooks",
-        "Updated digital textbooks to comply with Web Content Accessibility Guidelines by integrating closed captioning",
-        "Embedded interactive learning components using H5P and LaTeX-rendered equations",
-      ],
-    },
-    {
-      title: "Artificial Intelligence/Machine Learning Instructor Assistant",
-      company: "Kode With Klossy",
-      location: "Remote",
-      years: "March 2025 - Present",
-      description: [
-        "Taught basic machine learning principles to middle/high school students of traditionally underrepresented genders in tech",
-        "Instructed on supervised learning, image classification, sentiment analysis, neural networks, semantic search, and RAG",
-      ],
-    },
-    {
-      title: "Research Intern",
-      company: "James Z. Wang Research Group",
-      location: "University Park, PA",
-      years: "January 2025 - Present",
-      description: [
-        "Researched biases present in LLMs regarding emotions within the area of affective computing",
-        "Analyzed published research literature to support hypothesis formation and determine metrics for biases",
-        "Secured funding from the NASA Pennsylvania Space Grant Consortium PSU Undergraduate Research Internship Program",
-      ],
-    },
     {
       title: "International Student Services Assistant",
       company: "Penn State Global",
@@ -77,4 +44,4 @@ function WorkExperience() {
   );
 }
 
-export default WorkExperience;
+export default React.memo(WorkExperience);

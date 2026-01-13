@@ -27,11 +27,13 @@
 }
 
 .profile-picture img {
-  width: 400px;
-  height: 500px;
-  border-radius: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: 60% top;
   display: block;
+  padding-left: 20px;
 }
 
 .about-text {

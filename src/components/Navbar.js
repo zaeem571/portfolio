@@ -1,32 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+
+const SCROLL_THRESHOLD = 100;
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isThin, setIsThin] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past initial threshold
-        setIsThin(true);
-      } else if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setIsThin(false);
+          // Only update if scroll passes threshold
+          if (currentScrollY > SCROLL_THRESHOLD) {
+            if (!isThin) setIsThin(true);
+          } else {
+            if (isThin) setIsThin(false);
+          }
+
+          lastScrollY.current = currentScrollY;
+          ticking.current = false;
+        });
+
+        ticking.current = true;
       }
-      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [isThin]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -75,4 +85,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default React.memo(Navbar);

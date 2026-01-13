@@ -1,6 +1,5 @@
 import React from "react";
 import "./Contact.css";
-import "./animations.css";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import { useIntersectionObserver } from "./useIntersectionObserver";
 
@@ -50,4 +49,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default React.memo(Contact);

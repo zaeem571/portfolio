@@ -1,21 +1,10 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import "./About.css";
-import "./animations.css";
 import { TypeAnimation } from "react-type-animation";
 import { useIntersectionObserver } from "./useIntersectionObserver";
 
-const About = forwardRef((props, ref) => {
-  const [internalRef, isVisible] = useIntersectionObserver();
-
-  // Combine the internal ref with the forwarded ref
-  const setRefs = (node) => {
-    internalRef.current = node;
-    if (typeof ref === "function") {
-      ref(node);
-    } else if (ref) {
-      ref.current = node;
-    }
-  };
+const About = () => {
+  const [ref, isVisible] = useIntersectionObserver();
 
   const skills = [
     "Python",
@@ -31,7 +20,7 @@ const About = forwardRef((props, ref) => {
   return (
     <section
       id="about"
-      ref={setRefs}
+      ref={ref}
       className={`about-section fade-in ${isVisible ? "visible" : ""}`}
     >
       <h2>
@@ -51,11 +40,18 @@ const About = forwardRef((props, ref) => {
           wrapper="span"
           speed={50}
           repeat={Infinity}
+          cursor={true}
         />
       </h2>
       <div className="about-content">
         <div className="profile-picture">
-          <img src="/portfolio/profilepic.png" alt="Zaeem Mahmood" />
+          <img
+            src="/portfolio/profilepic.png"
+            alt="Zaeem Mahmood"
+            loading="lazy"
+            width="250"
+            height="250"
+          />
         </div>
         <div className="about-text">
           <p>
@@ -68,7 +64,7 @@ const About = forwardRef((props, ref) => {
             <h3>Skills</h3>
             <ul className="skills-list">
               {skills.map((skill, index) => (
-                <li key={index} className="skill-item">
+                <li key={skill} className="skill-item">
                   {skill}
                 </li>
               ))}
@@ -78,6 +74,6 @@ const About = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
-export default About;
+export default React.memo(About);

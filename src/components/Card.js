@@ -31,10 +31,8 @@ const Card = ({
                 <li key={i}>{desc}</li>
               ))}
             </ul>
-          ) : typeof description === "string" ? (
-            <p>{description}</p>
           ) : (
-            <p>{description}</p>
+            description
           )}
         </div>
       )}
@@ -42,7 +40,7 @@ const Card = ({
       {technologies && technologies.length > 0 && (
         <div className="card-technologies">
           {technologies.map((tech, i) => (
-            <span key={i} className="tech-tag">
+            <span key={tech} className="tech-tag">
               {tech}
             </span>
           ))}
@@ -65,4 +63,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default React.memo(Card);

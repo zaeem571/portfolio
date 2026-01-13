@@ -1,6 +1,5 @@
 import React from "react";
 import "./Projects.css";
-import "./animations.css";
 import { useIntersectionObserver } from "./useIntersectionObserver";
 import Card from "./Card";
 
@@ -12,16 +11,23 @@ function Projects() {
       title: "Punjab Judicial Academy Management System",
       description: (
         <>
-          Designed and implemented a management system for the Punjab Judicial
-          Academy, optimizing learning, hostel, and mess management. The system
-          enables participant enrollment, schedules training, administers tests,
-          tracks attendance, and oversees hostel and mess.
-          <br />
-          <br />I contributed to requirement gathering, designing the system
-          architecture, UI/UX design, and front-end development using Next.js.
+          Designed and implemented a management system for the PJA, optimizing
+          learning, hostel, and mess management. The system enables participant
+          enrollment, schedules training, administers tests, tracks attendance,
+          and oversees hostel and mess.
+          <ul>
+            <li key="requirement-gathering">
+              Contributed to requirement gathering and designing the system
+              architecture
+            </li>
+            <li key="ui-ux">Designed the UI/UX</li>
+            <li key="frontend">
+              Implemented front-end development using Next.js
+            </li>
+          </ul>
         </>
       ),
-      technologies: ["Figma", "Next.js"],
+      technologies: ["Figma", "Next.js", "Git", "GitHub"],
       link: null,
     },
   ];
@@ -49,4 +55,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default React.memo(Projects);

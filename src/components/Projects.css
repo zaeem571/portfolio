@@ -12,9 +12,13 @@
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 27px;
   padding: 18px;
-  max-width: 1080px;
+  max-width: 900px;
   margin: 0 auto;
   justify-items: center;
+}
+
+.projects-grid .card-description ul {
+  padding-left: 140px;
 }
 
 .project-card {
