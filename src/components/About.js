@@ -10,7 +10,6 @@ const About = () => {
     "Python",
     "SQL",
     "Kotlin",
-    "HTML/CSS",
     "Next.js",
     "Git",
     "GitHub",
@@ -55,9 +54,9 @@ const About = () => {
         </div>
         <div className="about-text">
           <p>
-            Hi! My name is Zaeem and I'm a Computer Science student at
-            Government College University, Lahore! I'm looking to specialize in
-            AI and machine learning engineering.
+            I'm a Computer Science student at Government College University,
+            Lahore! I'm looking to specialize in AI and machine learning
+            engineering.
           </p>
 
           <div className="skills-inline">

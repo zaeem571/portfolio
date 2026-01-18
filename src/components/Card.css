@@ -15,6 +15,7 @@
   color: var(--heading-color);
   margin-bottom: var(--spacing-sm);
   font-size: 1.8rem;
+  line-height: 1.3;
 }
 
 .card-subtitle {
@@ -34,6 +35,8 @@
 .card-description {
   margin: var(--spacing-sm) 0;
   color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .card-description p {
@@ -49,6 +52,7 @@
 
 .card-description li {
   margin-bottom: var(--spacing-sm);
+  line-height: 1.5;
 }
 
 .card-technologies {
@@ -79,17 +83,108 @@
   color: #fff;
   text-decoration: none;
   padding: 11px 29px;
-  background-color: #7c3aed;
+  background-color: var(--primary-color, #7c3aed);
   border: none;
   border-radius: 5px;
   font-weight: 600;
   box-shadow: 0 3.6px 7.2px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .card-link:hover {
   color: #fff;
-  background-color: #5b21b6;
+  background-color: var(--primary-hover, #5b21b6);
   transform: translateY(-2.7px);
   box-shadow: 0 7.2px 14.4px rgba(0, 0, 0, 0.3);
+}
+
+.card-link:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .card-years,
+  .card-location {
+    font-size: 0.95rem;
+  }
+
+  .card-description {
+    font-size: 1rem;
+  }
+
+  .card-description ul {
+    margin-left: 14px;
+  }
+
+  .card-technologies {
+    gap: 6px;
+    margin: 12px 0;
+  }
+
+  .tech-tag {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+
+  .card-link {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 14px;
+    border-radius: 6px;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card-years,
+  .card-location {
+    font-size: 0.9rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+
+  .card-description ul {
+    margin-left: 12px;
+  }
+
+  .card-description li {
+    margin-bottom: 6px;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+  }
+
+  .card-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
 }

@@ -14,10 +14,10 @@ function Projects() {
           Designed and implemented a management system for the PJA, optimizing
           learning, hostel, and mess management. The system enables participant
           enrollment, schedules training, administers tests, tracks attendance,
-          and oversees hostel and mess.
+          and oversees the hostel and mess.
           <ul>
             <li key="requirement-gathering">
-              Contributed to requirement gathering and designing the system
+              Contributed to requirement gathering and designed the system
               architecture
             </li>
             <li key="ui-ux">Designed the UI/UX</li>
