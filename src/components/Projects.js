@@ -3,34 +3,22 @@ import "./Projects.css";
 import { useIntersectionObserver } from "./useIntersectionObserver";
 import Card from "./Card";
 
-function Projects() {
-  const [ref, isVisible] = useIntersectionObserver();
+const PROJECT_DATA = [
+  {
+    id: "pja-system",
+    title: "Punjab Judicial Academy Management System",
+    description: [
+      "Developed a management system including learning, hostel, and mess management",
+      "Enabled participant enrollment, schedules training, administers tests, tracks attendance",
+      "Designed system documentation, including requirement gathering, use cases, workflows, ER diagrams, and other design-related tasks",
+      "Designed the UI/UX in Figma and implemented the front-end using Next.js",
+    ],
+    technologies: ["Figma", "Next.js", "TypeScript"],
+  },
+];
 
-  const projects = [
-    {
-      title: "Punjab Judicial Academy Management System",
-      description: (
-        <>
-          Designed and implemented a management system for the PJA, optimizing
-          learning, hostel, and mess management. The system enables participant
-          enrollment, schedules training, administers tests, tracks attendance,
-          and oversees the hostel and mess.
-          <ul>
-            <li key="requirement-gathering">
-              Contributed to requirement gathering and designed the system
-              architecture
-            </li>
-            <li key="ui-ux">Designed the UI/UX</li>
-            <li key="frontend">
-              Implemented front-end development using Next.js
-            </li>
-          </ul>
-        </>
-      ),
-      technologies: ["Figma", "Next.js", "Git", "GitHub"],
-      link: null,
-    },
-  ];
+const Projects = () => {
+  const [ref, isVisible] = useIntersectionObserver();
 
   return (
     <section
@@ -40,19 +28,17 @@ function Projects() {
     >
       <h2>Projects</h2>
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {PROJECT_DATA.map((project) => (
           <Card
-            key={index}
+            key={project.id}
             title={project.title}
             description={project.description}
             technologies={project.technologies}
-            link={project.link}
-            linkText="View Project"
           />
         ))}
       </div>
     </section>
   );
-}
+};
 
 export default React.memo(Projects);

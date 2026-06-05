@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useIntersectionObserver = (options = {}) => {
+export const useIntersectionObserver = ({
+  threshold = 0.1,
+  rootMargin = "0px",
+} = {}) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const targetRef = useRef(null);
 
@@ -10,10 +13,9 @@ export const useIntersectionObserver = (options = {}) => {
         setIsIntersecting(entry.isIntersecting);
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px",
-        ...options,
-      }
+        threshold,
+        rootMargin,
+      },
     );
 
     const currentTarget = targetRef.current;
@@ -26,8 +28,7 @@ export const useIntersectionObserver = (options = {}) => {
         observer.unobserve(currentTarget);
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Intentionally empty - options should not trigger re-observation
+  }, [threshold, rootMargin]);
 
   return [targetRef, isIntersecting];
 };

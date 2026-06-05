@@ -19,7 +19,7 @@ const Contact = () => {
           <div className="contact-links">
             <a
               href="mailto:zaeem.m571@gmail.com"
-              className="contact-link highlight-link"
+              className="contact-link"
             >
               <FaEnvelope className="contact-icon" />
               Email
@@ -28,7 +28,7 @@ const Contact = () => {
               href="https://linkedin.com/in/zaeemmahmood"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-link highlight-link"
+              className="contact-link"
             >
               <FaLinkedin className="contact-icon" />
               LinkedIn
@@ -37,7 +37,7 @@ const Contact = () => {
               href="https://github.com/zaeem571"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-link highlight-link"
+              className="contact-link"
             >
               <FaGithub className="contact-icon" />
               GitHub

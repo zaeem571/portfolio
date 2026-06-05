@@ -3,22 +3,23 @@ import "./CertificateAndInvolvement.css";
 import { useIntersectionObserver } from "./useIntersectionObserver";
 import Card from "./Card";
 
-function CertificateAndInvolvement() {
-  const [ref, isVisible] = useIntersectionObserver();
+const INVOLVEMENTS = [
+  {
+    id: "steel-city-codes",
+    title: "Executive Director of Finance & Pittsburgh Regional Director",
+    company: "Steel City Codes",
+    location: "Pittsburgh, PA",
+    years: "May 2023 - June 2024",
+    description: [
+      "Wrote grant applications to support nationwide computer science education/diversity programs and hackathons",
+      "Organized and taught Python and Java computer science summer camp reaching 200+ students and volunteers",
+      "Managed and coordinated 17 after-school chapters throughout the Greater Pittsburgh region",
+    ],
+  },
+];
 
-  const involvements = [
-    {
-      title: "Executive Director of Finance & Pittsburgh Regional Director",
-      company: "Steel City Codes",
-      location: "Pittsburgh, PA",
-      years: "May 2023 - June 2024",
-      description: [
-        "Wrote grant applications to support nationwide computer science education/diversity programs and hackathons",
-        "Organized and taught Python and Java computer science summer camp reaching 200+ students and volunteers",
-        "Managed and coordinated 17 after-school chapters throughout the Greater Pittsburgh region",
-      ],
-    },
-  ];
+const CertificateAndInvolvement = () => {
+  const [ref, isVisible] = useIntersectionObserver();
 
   return (
     <section
@@ -30,9 +31,9 @@ function CertificateAndInvolvement() {
     >
       <h2>Certificates & Involvement</h2>
       <div className="certificate-container">
-        {involvements.map((inv, index) => (
+        {INVOLVEMENTS.map((inv) => (
           <Card
-            key={index}
+            key={inv.id}
             title={`${inv.title} @ ${inv.company}`}
             years={inv.years}
             location={inv.location}
@@ -42,6 +43,6 @@ function CertificateAndInvolvement() {
       </div>
     </section>
   );
-}
+};
 
 export default React.memo(CertificateAndInvolvement);

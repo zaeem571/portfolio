@@ -3,22 +3,24 @@ import "./WorkExperience.css";
 import { useIntersectionObserver } from "./useIntersectionObserver";
 import Card from "./Card";
 
-function WorkExperience() {
-  const [ref, isVisible] = useIntersectionObserver();
+const EXPERIENCES = [
+  {
+    id: "arzen-inc",
+    title: "Development Intern",
+    company: "Arzen Inc.",
+    location: "Lahore, Pakistan.",
+    years: "March 2026 - Present",
+    description: [
+      "Working on production-level projects implementing industry’s best practices",
+      "Built front-end features using Next.js with SSR and SSG for live production websites",
+      "Implemented CMS (Strapi) on websites to allow non-technical content management",
+      "Developed REST APIs to connect front-end with backend systems",
+    ],
+  },
+];
 
-  const experiences = [
-    {
-      title: "International Student Services Assistant",
-      company: "Penn State Global",
-      location: "University Park, PA",
-      years: "September 2024 - Present",
-      description: [
-        "Provided front-desk assistance to Penn State's over 9,000 international students and scholars",
-        "Worked closely with International Student Advisors to coordinate appointments and handle emergencies",
-        "Utilized LLMs to filter and organize common student queries into an FAQ page for Penn State Global's website",
-      ],
-    },
-  ];
+const WorkExperience = () => {
+  const [ref, isVisible] = useIntersectionObserver();
 
   return (
     <section
@@ -30,9 +32,9 @@ function WorkExperience() {
     >
       <h2>Work Experience</h2>
       <div className="experiences-container">
-        {experiences.map((exp, index) => (
+        {EXPERIENCES.map((exp) => (
           <Card
-            key={index}
+            key={exp.id}
             title={`${exp.title} @ ${exp.company}`}
             years={exp.years}
             location={exp.location}
@@ -42,6 +44,6 @@ function WorkExperience() {
       </div>
     </section>
   );
-}
+};
 
 export default React.memo(WorkExperience);

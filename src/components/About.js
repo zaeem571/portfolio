@@ -7,10 +7,9 @@ const About = () => {
   const [ref, isVisible] = useIntersectionObserver();
 
   const skills = [
-    "Python",
-    "SQL",
-    "Kotlin",
     "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
     "Git",
     "GitHub",
     "Figma",
@@ -27,7 +26,7 @@ const About = () => {
           sequence={[
             "My name is Zaeem Mahmood and I'm a Computer Science Student",
             1000,
-            "My name is Zaeem Mahmood and I'll be a future Android Developer",
+            "My name is Zaeem Mahmood and I'm a Front-end Developer",
             2000,
             "My name is Zaeem Mahmood and I'm a Problem Solver",
             2000,
@@ -45,7 +44,7 @@ const About = () => {
       <div className="about-content">
         <div className="profile-picture">
           <img
-            src="/portfolio/profilepic.png"
+            src="/portfolio/profilepic.webp"
             alt="Zaeem Mahmood"
             loading="lazy"
             width="250"
@@ -54,16 +53,15 @@ const About = () => {
         </div>
         <div className="about-text">
           <p>
-            I'm a Computer Science student at Government College University,
-            Lahore! I'm looking to specialize in AI and machine learning
-            engineering.
+            I'm a Computer Science student! I'm looking to specialize in AI and
+            machine learning engineering.
           </p>
 
           <div className="skills-inline">
             <h3>Skills</h3>
             <ul className="skills-list">
               {skills.map((skill, index) => (
-                <li key={skill} className="skill-item">
+                <li key={`skill-${index}`} className="skill-item">
                   {skill}
                 </li>
               ))}

@@ -1,6 +1,6 @@
-# 🌐 Personal Website
+# 🌐 Personal Website – Zaeem Mahmood
 
-This is the source code for my personal website, built using **React.js**. It's designed to showcase my projects, resume, and background as a student and a developer.
+This is the source code for my personal website, built using **React.js**. It's designed to showcase my projects, work experience, and background as a student and a developer.
 
 ## 🚀 Live Site
 

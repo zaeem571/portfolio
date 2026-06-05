@@ -4,10 +4,18 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const SCROLL_THRESHOLD = 100;
 
-function Navbar() {
+const NAV_ITEMS = [
+  { id: "about", label: "About" },
+  { id: "work-experience", label: "Work Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "certificate-involvement", label: "Certificates & Involvement" },
+  { id: "contact", label: "Contact" },
+];
+
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isThin, setIsThin] = useState(false);
-  const lastScrollY = useRef(0);
+  const [activeId, setActiveId] = useState("about");
   const ticking = useRef(false);
 
   useEffect(() => {
@@ -15,15 +23,9 @@ function Navbar() {
       if (!ticking.current) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
+          const shouldBeThin = currentScrollY > SCROLL_THRESHOLD;
 
-          // Only update if scroll passes threshold
-          if (currentScrollY > SCROLL_THRESHOLD) {
-            if (!isThin) setIsThin(true);
-          } else {
-            if (isThin) setIsThin(false);
-          }
-
-          lastScrollY.current = currentScrollY;
+          setIsThin(shouldBeThin);
           ticking.current = false;
         });
 
@@ -36,7 +38,29 @@ function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isThin]);
+  }, []);
+
+  // Scroll-spy: highlight the nav item whose section is in view
+  useEffect(() => {
+    const sections = NAV_ITEMS.map(({ id }) => document.getElementById(id)).filter(
+      Boolean,
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -60,29 +84,21 @@ function Navbar() {
             isThin ? "navbar-menu-thin" : ""
           }`}
         >
-          <a href="#about" className="nav-item" onClick={closeMenu}>
-            About
-          </a>
-          <a href="#work-experience" className="nav-item" onClick={closeMenu}>
-            Work Experience
-          </a>
-          <a href="#projects" className="nav-item" onClick={closeMenu}>
-            Projects
-          </a>
-          <a
-            href="#certificate-involvement"
-            className="nav-item"
-            onClick={closeMenu}
-          >
-            Certificates & Involvement
-          </a>
-          <a href="#contact" className="nav-item" onClick={closeMenu}>
-            Contact
-          </a>
+          {NAV_ITEMS.map(({ id, label }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={`nav-item ${activeId === id ? "active" : ""}`}
+              aria-current={activeId === id ? "true" : undefined}
+              onClick={closeMenu}
+            >
+              {label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default React.memo(Navbar);

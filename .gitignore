@@ -1,3 +1,11 @@
+# Dependencies
 node_modules/
-package-lock.json
-.DS_Store 
+
+# OS files
+.DS_Store
+
+# Build output
+/build/
+
+# Claude Code local settings
+.claude/

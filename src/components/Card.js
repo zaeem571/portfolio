@@ -3,21 +3,16 @@ import "./Card.css";
 
 const Card = ({
   title,
-  subtitle,
   years,
   location,
   description,
   technologies,
   link,
   linkText = "View More",
-  children,
-  className = "",
 }) => {
   return (
-    <div className={`card ${className}`}>
+    <div className="card">
       {title && <h3>{title}</h3>}
-
-      {subtitle && <p className="card-subtitle">{subtitle}</p>}
 
       {years && <p className="card-years">{years}</p>}
 
@@ -28,7 +23,7 @@ const Card = ({
           {Array.isArray(description) ? (
             <ul>
               {description.map((desc, i) => (
-                <li key={i}>{desc}</li>
+                <li key={`desc-${i}`}>{desc}</li>
               ))}
             </ul>
           ) : (
@@ -40,14 +35,12 @@ const Card = ({
       {technologies && technologies.length > 0 && (
         <div className="card-technologies">
           {technologies.map((tech, i) => (
-            <span key={tech} className="tech-tag">
+            <span key={`tech-${i}`} className="tech-tag">
               {tech}
             </span>
           ))}
         </div>
       )}
-
-      {children}
 
       {link && (
         <a

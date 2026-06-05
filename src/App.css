@@ -28,7 +28,7 @@ main {
 section {
   margin: 40px 0;
   padding: 20px;
-  background-color: #282c34;
+  background-color: var(--section-background);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -66,32 +66,6 @@ html {
   --primary-hover: #5b21b6;
 }
 
-/* Common section container styles */
-.section-container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-  max-width: 810px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: var(--spacing-lg);
-  padding: var(--spacing-md);
-  max-width: 1080px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-.section-content {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
 /* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible {
@@ -118,21 +92,6 @@ button:focus-visible {
     font-size: 1.6rem;
     margin-bottom: 16px;
   }
-
-  .section-container {
-    gap: 18px;
-    padding: 0 12px;
-  }
-
-  .section-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 12px;
-  }
-
-  .section-content {
-    padding: 0 12px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -154,19 +113,5 @@ button:focus-visible {
   h2 {
     font-size: 1.4rem;
     margin-bottom: 12px;
-  }
-
-  .section-container {
-    gap: 12px;
-    padding: 0 8px;
-  }
-
-  .section-grid {
-    gap: 12px;
-    padding: 8px;
-  }
-
-  .section-content {
-    padding: 0 8px;
   }
 }
