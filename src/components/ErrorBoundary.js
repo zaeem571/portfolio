@@ -17,11 +17,12 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div style={{ padding: "20px", textAlign: "center" }}>
-          <h1>Something went wrong</h1>
-          <p>Please refresh the page or contact the developer</p>
+        <div className="p-5 text-center">
+          <h1 className="text-2xl font-bold mb-2 text-heading">Something went wrong</h1>
+          <p className="text-text">Please refresh the page or contact the developer</p>
           {process.env.NODE_ENV === "development" && this.state.error && (
-            <details style={{ whiteSpace: "pre-wrap" }}>
+            <details className="whitespace-pre-wrap mt-4 text-left text-sm bg-card p-3 rounded-card">
+              <summary className="cursor-pointer font-semibold mb-2">Error Details</summary>
               {this.state.error.toString()}
             </details>
           )}

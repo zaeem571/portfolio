@@ -1,96 +1,16 @@
-@import "./components/animations.css";
-
-body {
-  margin: 0;
-  background-color: #121212;
-  font-family: "Quicksand", Arial, sans-serif;
-  font-weight: 400;
-  color: #f0f0f0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.App {
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #191919;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-section {
-  margin: 40px 0;
-  padding: 20px;
-  background-color: var(--section-background);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #e0e0e0;
-  font-weight: 600;
-}
-
-.App img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
   font-size: 90%;
-  scroll-padding-top: 80px; /* Prevent content from hiding under sticky navbar */
-}
-
-:root {
-  --card-background: #3a3f4a;
-  --section-background: #282c34;
-  --text-color: #f0f0f0;
-  --heading-color: #e0e0e0;
-  --spacing-sm: 9px;
-  --spacing-md: 18px;
-  --spacing-lg: 27px;
-  --border-radius: 8px;
-  --transition: all 0.3s ease;
-  --primary-color: #7c3aed;
-  --primary-hover: #5b21b6;
-}
-
-/* Focus styles for accessibility */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 60px;
-  }
-
-  main {
-    padding: 12px;
-  }
-
-  section {
-    margin: 24px 0;
-    padding: 16px;
-    border-radius: 6px;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-    margin-bottom: 16px;
   }
 }
 
@@ -99,19 +19,25 @@ button:focus-visible {
     font-size: 85%;
     scroll-padding-top: 60px;
   }
+}
 
-  main {
-    padding: 8px;
-  }
+a:focus-visible,
+button:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary;
+}
 
-  section {
-    margin: 16px 0;
-    padding: 12px;
-    border-radius: 6px;
-  }
+body {
+  @apply bg-[#121212] text-text font-sans overflow-x-hidden;
+}
 
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-  }
+.App {
+  @apply flex flex-col min-h-screen bg-app;
+}
+
+main {
+  @apply flex-1 px-[20px] max-w-[1200px] mx-auto w-full;
+}
+
+section {
+  @apply rounded-card shadow-[0_4px_8px_rgba(0,0,0,0.3)];
 }

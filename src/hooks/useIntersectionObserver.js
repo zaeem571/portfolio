@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 
 export const useIntersectionObserver = ({
   threshold = 0.1,
@@ -7,15 +7,14 @@ export const useIntersectionObserver = ({
   const [isIntersecting, setIsIntersecting] = useState(false);
   const targetRef = useRef(null);
 
+  const options = useMemo(() => ({ threshold, rootMargin }), [threshold, rootMargin]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
       },
-      {
-        threshold,
-        rootMargin,
-      },
+      options,
     );
 
     const currentTarget = targetRef.current;
@@ -28,7 +27,7 @@ export const useIntersectionObserver = ({
         observer.unobserve(currentTarget);
       }
     };
-  }, [threshold, rootMargin]);
+  }, [options]);
 
   return [targetRef, isIntersecting];
 };

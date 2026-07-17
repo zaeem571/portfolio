@@ -1,13 +1,14 @@
-# 🌐 Personal Website – Zaeem Mahmood
+# 🌐 Personal Portfolio – Zaeem Mahmood
 
-This is the source code for my personal website, built using **React.js**. It's designed to showcase my projects, work experience, and background as a student and a developer.
+A modern, responsive portfolio website built with React and Tailwind CSS. [Live Site](https://zaeem571.github.io/portfolio/)
 
-## 🚀 Live Site
+## ✨ Features
 
-You can visit the live site here: https://zaeem571.github.io/portfolio/
+- Responsive design with smooth animations
+- Dark theme with scroll spy navigation
+- Centralized color system for easy theming
+- Optimized performance with React.memo and IntersectionObserver
 
 ## 🛠️ Tech Stack
 
-- **Framework**: React.js
-- **Styling**: CSS
-- **Hosting**: GitHub Pages
+React 18.2.0 | Tailwind CSS 3.4.19 | craco | react-icons | GitHub Pages
