@@ -4,15 +4,23 @@ import Card from "./Card";
 
 const INVOLVEMENTS = [
   {
-    id: "steel-city-codes",
     title: "Finance Executive",
-    company: "IEEE GCU Branch",
-    location: "Pittsburgh, PA",
-    years: "May 2023 - June 2024",
+    company: "IEEE GCU Student Branch",
+    location: "GCU, Lahore",
+    years: "Nov 2024 - May 2025",
     description: [
-      "Wrote grant applications to support nationwide computer science education/d",
-      "Organized and taught Python and Java computer science summer camp reaching",
-      "Managed and coordinated 17 after-school chapters throughout the",
+      "Led a finance team, owning financial planning, budgeting, and expense tracking across student-led events and activities.",
+      "Managed financial operations, documentation, and records, ensuring accurate tracking and smooth execution of organizational activities.",
+    ],
+  },
+  {
+    title: "HEC GEN AI Program",
+    company: "Aspire Pakistan",
+    location: "Remote",
+    years: "Oct 2025 - Nov 2025",
+    description: [
+      "Completed the HEC Generative AI program covering LLMs, prompt engineering, RAG systems, AI agents, and AI application development and deployment workflows.",
+      "Built AI-powered solutions using API integrations, vector databases, and AI-assisted prototyping, applying real-world AI development workflows.",
     ],
   },
 ];

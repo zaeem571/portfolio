@@ -18,7 +18,7 @@ const Card = ({
       {location && <p className="text-text-muted text-base mb-sm text-left xs:text-[0.95rem] md:text-[0.95rem]">{location}</p>}
 
       {description && (
-        <div className="text-text text-[1.1rem] leading-[1.8] mt-md my-sm xs:text-[0.95rem] md:text-base">
+        <div className="text-text text-[1.1rem] leading-[1.8] mt-md my-sm px-sm xs:px-md xs:text-[0.95rem] md:px-lg md:text-base">
           {Array.isArray(description) ? (
             <ul className="list-disc ml-auto mr-auto w-fit text-left px-[16px] xs:px-[12px] md:px-0">
               {description.map((desc) => (
