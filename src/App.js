@@ -6,6 +6,8 @@ import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import WorkExperience from "./components/sections/WorkExperience";
 import CertificateAndInvolvement from "./components/sections/CertificateAndInvolvement";
+import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <CertificateAndInvolvement />
         <Contact />
       </main>
+      <Footer />
+      <BackToTop />
     </div>
   );
 }
