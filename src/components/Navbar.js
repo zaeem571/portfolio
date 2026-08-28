@@ -85,20 +85,12 @@ const Navbar = () => {
             <a
               key={id}
               href={`#${id}`}
-              className={`group relative flex h-[72px] cursor-pointer items-center whitespace-nowrap px-[0.35rem] text-heading no-underline transition-all duration-300 ease-in-out hover:text-primary md:flex md:h-auto md:min-h-[54px] md:border-l-[3px] md:border-l-transparent md:px-3 md:py-5 ${
+              className={`relative flex h-[72px] cursor-pointer items-center whitespace-nowrap px-[0.35rem] text-heading no-underline transition-all duration-300 ease-in-out hover:text-primary md:flex md:h-auto md:min-h-[54px] md:px-3 md:py-5 ${
                 isThin ? "md:h-[54px]" : ""
-              } ${
-                activeId === id
-                  ? "text-primary md:border-l-primary md:bg-gradient-to-r md:from-transparent md:via-primary-lighter md:to-transparent"
-                  : ""
-              }`}
+              } ${activeId === id ? "text-primary" : ""}`}
               aria-current={activeId === id ? "true" : undefined}
               onClick={closeMenu}
             >
-              <span
-                className="absolute bottom-0 left-1/2 h-[2px] -translate-x-1/2 bg-primary transition-all duration-300 group-hover:w-4/5 md:hidden"
-                style={{ width: activeId === id ? "80%" : "0" }}
-              ></span>
               {label}
             </a>
           ))}
