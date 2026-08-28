@@ -11,7 +11,7 @@ const CertificateAndInvolvement = () => {
     <section
       id="certificate-involvement"
       ref={ref}
-      className={`relative mx-auto my-section-my-sm bg-section px-0 py-section-py-sm text-center sm:my-section-my-md sm:py-section-py-md md:my-section-my md:py-section-py ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"} transition-all duration-1000 ease-out`}
+      className={`relative mx-auto my-section-my-sm bg-section px-0 py-section-py-sm text-center sm:my-section-my-md sm:py-section-py-md md:my-section-my md:py-section-py ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"} transition-all duration-500 ease-out`}
     >
       <h2 className="mb-5 text-[1.5rem] font-bold xs:text-[1.4rem] md:text-[1.6rem]">
         Certificates & Involvement

@@ -12,7 +12,7 @@ const About = () => {
     <section
       id="about"
       ref={ref}
-      className={`relative mx-auto my-section-my-sm bg-section px-0 py-section-py-sm text-center sm:my-section-my-md sm:py-section-py-md md:my-section-my md:py-section-py ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"} transition-all duration-1000 ease-out`}
+      className={`relative mx-auto my-section-my-sm bg-section px-0 py-section-py-sm text-center sm:my-section-my-md sm:py-section-py-md md:my-section-my md:py-section-py ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"} transition-all duration-500 ease-out`}
     >
       <h2 className="mb-5 flex h-[110px] items-center justify-center px-3 text-[1.3rem] font-bold xs:mb-2 xs:min-h-[120px] xs:px-4 xs:text-[1.4rem] md:mb-2 md:min-h-[120px] md:px-0 md:text-[1.6rem]">
         <TypeAnimation
