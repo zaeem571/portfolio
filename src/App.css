@@ -27,15 +27,15 @@ button:focus-visible {
 }
 
 body {
-  @apply bg-[#121212] text-text font-sans overflow-x-hidden;
+  @apply overflow-x-hidden bg-[#121212] font-sans text-text;
 }
 
 .App {
-  @apply flex flex-col min-h-screen bg-app;
+  @apply flex min-h-screen flex-col bg-app;
 }
 
 main {
-  @apply flex-1 px-[20px] max-w-[1200px] mx-auto w-full;
+  @apply mx-auto w-full max-w-[1200px] flex-1 px-[20px];
 }
 
 section {

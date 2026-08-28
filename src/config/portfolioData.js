@@ -8,14 +8,7 @@ export const portfolioData = {
     name: "Zaeem Mahmood",
     bio: "I'm a Computer Science student I'm looking to specialize in AI and machine learning engineering.",
     profilePic: "/portfolio/profilepic.webp",
-    skills: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Git",
-      "GitHub",
-      "Figma",
-    ],
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Git", "GitHub", "Figma"],
     typeAnimationSequence: [
       "My name is Zaeem Mahmood and I'm a Computer Science Student",
       1000,
@@ -27,9 +20,9 @@ export const portfolioData = {
       2000,
       "My name is Zaeem Mahmood and I'm a Lifelong Learner",
       2000,
-    ]
+    ],
   },
-  
+
   experiences: [
     {
       id: "arzen-inc",
@@ -89,7 +82,7 @@ export const portfolioData = {
     email: "zaeem.m571@gmail.com",
     linkedin: "https://linkedin.com/in/zaeemmahmood",
     github: "https://github.com/zaeem571",
-  }
+  },
 };
 
 export default portfolioData;
