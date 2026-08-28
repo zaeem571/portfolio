@@ -12,7 +12,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={ref}
-      className={`relative mx-auto my-section-my-sm bg-section px-0 py-section-py-sm sm:my-section-my-md sm:py-section-py-md md:my-section-my md:py-section-py ${isVisible ? "animate-fade-in" : "translate-y-5 opacity-0"} transition-all duration-1000 ease-out`}
+      className={`relative mx-auto my-section-my-sm bg-section px-0 py-section-py-sm sm:my-section-my-md sm:py-section-py-md md:my-section-my md:py-section-py ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"} transition-all duration-1000 ease-out`}
     >
       <div className="mx-auto max-w-[720px] px-container-px-sm sm:px-container-px-md md:px-container-px">
         <div className="text-center">
