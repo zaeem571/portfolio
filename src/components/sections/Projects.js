@@ -1,23 +1,11 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import Card from "./Card";
-
-const PROJECT_DATA = [
-  {
-    id: "pja-system",
-    title: "Punjab Judicial Academy Management System",
-    description: [
-      "Developed a management system including learning, hostel, and mess management",
-      "Enabled participant enrollment, schedules training, administers tests, tracks attendance",
-      "Designed system documentation, including requirement gathering, use cases, workflows,",
-      "Designed the UI/UX in Figma and implemented the front-end using Next.js",
-    ],
-    technologies: ["Figma", "Next.js", "TypeScript"],
-  },
-];
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import Card from "../ui/Card";
+import { portfolioData } from "../../config/portfolioData";
 
 const Projects = () => {
   const [ref, isVisible] = useIntersectionObserver();
+  const { projects } = portfolioData;
 
   return (
     <section
@@ -27,7 +15,7 @@ const Projects = () => {
     >
       <h2 className="text-[1.5rem] font-bold mb-5 md:text-[1.6rem] xs:text-[1.4rem]">Projects</h2>
       <div className="flex flex-col gap-sm px-container-px-sm max-w-[810px] mx-auto w-full sm:gap-md sm:px-container-px-md md:gap-lg md:px-container-px">
-        {PROJECT_DATA.map((project) => (
+        {projects.map((project) => (
           <Card
             key={project.id}
             title={project.title}

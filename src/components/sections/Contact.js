@@ -1,9 +1,11 @@
 import React from "react";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { portfolioData } from "../../config/portfolioData";
 
 const Contact = () => {
   const [ref, isVisible] = useIntersectionObserver();
+  const { contact } = portfolioData;
 
   return (
     <section
@@ -17,14 +19,14 @@ const Contact = () => {
           <p className="text-[1.1rem] text-text leading-[1.8] mb-5 md:text-base xs:text-[0.95rem]">Feel free to reach out to me through any of these channels:</p>
           <div className="flex flex-row flex-wrap gap-sm justify-center items-center mt-lg xs:gap-md xs:mt-lg md:gap-lg">
             <a
-              href="mailto:zaeem.m571@gmail.com"
+              href={`mailto:${contact.email}`}
               className="text-white no-underline px-4 py-2 text-sm bg-primary rounded-[5px] flex items-center gap-[7px] shadow-[0_3.6px_7.2px_rgba(0,0,0,0.2)] font-semibold transition-all duration-300 hover:bg-primary-hover hover:-translate-y-[2.7px] hover:shadow-[0_7.2px_14.4px_rgba(0,0,0,0.3)] focus:outline-2 focus:outline-offset-2 focus:outline-primary xs:py-3 xs:px-6 xs:text-base md:px-6 md:py-[10px] md:text-[0.95rem]"
             >
               <FaEnvelope className="text-sm xs:text-base" />
               Email
             </a>
             <a
-              href="https://linkedin.com/in/zaeemmahmood"
+              href={contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white no-underline px-4 py-2 text-sm bg-primary rounded-[5px] flex items-center gap-[7px] shadow-[0_3.6px_7.2px_rgba(0,0,0,0.2)] font-semibold transition-all duration-300 hover:bg-primary-hover hover:-translate-y-[2.7px] hover:shadow-[0_7.2px_14.4px_rgba(0,0,0,0.3)] focus:outline-2 focus:outline-offset-2 focus:outline-primary xs:py-3 xs:px-6 xs:text-base md:px-6 md:py-[10px] md:text-[0.95rem]"
@@ -33,7 +35,7 @@ const Contact = () => {
               LinkedIn
             </a>
             <a
-              href="https://github.com/zaeem571"
+              href={contact.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white no-underline px-4 py-2 text-sm bg-primary rounded-[5px] flex items-center gap-[7px] shadow-[0_3.6px_7.2px_rgba(0,0,0,0.2)] font-semibold transition-all duration-300 hover:bg-primary-hover hover:-translate-y-[2.7px] hover:shadow-[0_7.2px_14.4px_rgba(0,0,0,0.3)] focus:outline-2 focus:outline-offset-2 focus:outline-primary xs:py-3 xs:px-6 xs:text-base md:px-6 md:py-[10px] md:text-[0.95rem]"

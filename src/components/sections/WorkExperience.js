@@ -1,25 +1,11 @@
 import React from "react";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import Card from "./Card";
-
-const EXPERIENCES = [
-  {
-    id: "arzen-inc",
-    title: "Development Intern",
-    company: "Arzen Inc.",
-    location: "Lahore, Pakistan.",
-    years: "March 2026 - Present",
-    description: [
-      "Working on production-level projects implementing industry’s best practices",
-      "Built front-end features using Next.js with SSR and SSG for live production websites",
-      "Implemented CMS (Strapi) on websites to allow non-technical content management",
-      "Developed REST APIs to connect front-end with backend systems",
-    ],
-  },
-];
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import Card from "../ui/Card";
+import { portfolioData } from "../../config/portfolioData";
 
 const WorkExperience = () => {
   const [ref, isVisible] = useIntersectionObserver();
+  const { experiences } = portfolioData;
 
   return (
     <section
@@ -29,7 +15,7 @@ const WorkExperience = () => {
     >
       <h2 className="text-[1.5rem] font-bold mb-5 md:text-[1.6rem] xs:text-[1.4rem]">Work Experience</h2>
       <div className="flex flex-col gap-sm px-container-px-sm max-w-[810px] mx-auto w-full sm:gap-md sm:px-container-px-md md:gap-lg md:px-container-px">
-        {EXPERIENCES.map((exp) => (
+        {experiences.map((exp) => (
           <Card
             key={exp.id}
             title={`${exp.title} @ ${exp.company}`}

@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css"; /* Tailwind directives only */
 import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import WorkExperience from "./components/WorkExperience";
-import CertificateAndInvolvement from "./components/CertificateAndInvolvement";
+import About from "./components/sections/About";
+import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
+import WorkExperience from "./components/sections/WorkExperience";
+import CertificateAndInvolvement from "./components/sections/CertificateAndInvolvement";
 
 function App() {
   return (
