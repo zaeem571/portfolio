@@ -15,13 +15,17 @@ const About = () => {
       className={`relative mx-auto my-section-my-sm bg-section px-0 py-section-py-sm text-center sm:my-section-my-md sm:py-section-py-md md:my-section-my md:py-section-py ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"} transition-all duration-500 ease-out`}
     >
       <h2 className="mb-5 flex h-[110px] items-center justify-center px-3 text-[1.3rem] font-bold xs:mb-2 xs:min-h-[120px] xs:px-4 xs:text-[1.4rem] md:mb-2 md:min-h-[120px] md:px-0 md:text-[1.6rem]">
-        <TypeAnimation
-          sequence={about.typeAnimationSequence}
-          wrapper="span"
-          speed={50}
-          repeat={Infinity}
-          cursor={true}
-        />
+        <span>
+          My name is Zaeem Mahmood and I&apos;m{" "}
+          <TypeAnimation
+            sequence={about.typeAnimationSequence}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            cursor={true}
+            className="text-primary"
+          />
+        </span>
       </h2>
       <div className="relative mx-auto flex max-w-[1100px] flex-col items-center gap-4 px-[36px] text-center xs:gap-3 xs:px-4 md:flex-row md:items-end md:gap-[60px] md:text-left">
         <div className="flex-shrink-0 self-center xs:mb-0 xs:flex xs:justify-center xs:self-center md:-mb-5 md:self-end">
