@@ -10,9 +10,21 @@ const Card = ({
   technologies,
   link,
   linkText = "View More",
+  image,
+  imageAlt,
 }) => {
   return (
     <div className="rounded-[6px] bg-card p-[14px] shadow-[0_3.6px_7.2px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-[4.5px] hover:shadow-[0_7.2px_14.4px_rgba(0,0,0,0.3)] xs:rounded-card xs:p-[18px] md:rounded-card md:p-lg">
+      {image && (
+        <div className="mb-md overflow-hidden rounded-[4px] border border-white/10">
+          <img
+            src={image}
+            alt={imageAlt || title || "Project preview"}
+            loading="lazy"
+            className="h-48 w-full object-cover transition-transform duration-300 hover:scale-105 xs:h-56 md:h-64"
+          />
+        </div>
+      )}
       {title && (
         <h3 className="mb-sm text-center text-[1.15rem] font-bold leading-[1.3] text-heading xs:text-[1.35rem] md:text-[1.8rem]">
           {title}

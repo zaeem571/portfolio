@@ -26,10 +26,23 @@ export const portfolioData = {
   experiences: [
     {
       id: "arzen-inc",
+      title: "Junior Full Stack Developer",
+      company: "Arzen Inc.",
+      location: "Lahore, Pakistan.",
+      years: "August 2026 - Present",
+      description: [
+        "Working on production-level projects implementing industry’s best practices",
+        "Built front-end features using Next.js with SSR and SSG for live production websites",
+        "Implemented CMS (Strapi) on websites to allow non-technical content management",
+        "Developed REST APIs to connect front-end with backend systems",
+      ],
+    },
+    {
+      id: "arzen-inc-intern",
       title: "Development Intern",
       company: "Arzen Inc.",
       location: "Lahore, Pakistan.",
-      years: "March 2026 - Present",
+      years: "March 2026 - July 2026",
       description: [
         "Working on production-level projects implementing industry’s best practices",
         "Built front-end features using Next.js with SSR and SSG for live production websites",
@@ -43,6 +56,9 @@ export const portfolioData = {
     {
       id: "pja-system",
       title: "Punjab Judicial Academy Management System",
+      image: null, /* Set to image path e.g. "/portfolio/projects/pja.webp" when ready */
+      link: null, /* Set to live demo, repository, or Figma link */
+      linkText: "View Project",
       description: [
         "Developed a management system including learning, hostel, and mess management",
         "Enabled participant enrollment, schedules training, administers tests, tracks attendance",
