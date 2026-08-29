@@ -70,11 +70,13 @@ const Navbar = () => {
           className="block cursor-pointer rounded-[4px] p-2 text-[1.62rem] text-heading transition-all duration-300 hover:bg-primary-light hover:text-primary focus:outline-2 focus:outline-offset-2 focus:outline-primary md2:hidden"
           onClick={toggleMenu}
           aria-expanded={isOpen}
+          aria-controls="primary-navigation"
           aria-label="Toggle navigation menu"
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
         <div
+          id="primary-navigation"
           className={`items-center text-center transition-all duration-300 ease-in-out md2:flex md2:flex-row md2:justify-end md2:gap-1 md2:opacity-100 ${
             isOpen
               ? "fixed left-0 top-[72px] z-[998] flex h-[calc(100vh-72px)] w-full translate-y-0 flex-col overflow-y-auto bg-nav-mobile pt-5 opacity-100 backdrop-blur-[10px]"
